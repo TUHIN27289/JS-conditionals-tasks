@@ -10,3 +10,21 @@ if you get less than 80 go to home and sleep and act sad
 Note: 
 use nested if-else-if-else
 */
+
+const prompt = require("prompt-sync")();
+let yourScore, friendScore;
+yourScore = prompt("Enter your score: ");
+if (yourScore >= 80) {
+  friendScore = prompt("Enter your friend's score: ");
+  if (friendScore >= 80) {
+    console.log("Go for a lunch");
+  } else if (friendScore >= 60 && friendScore < 80) {
+    console.log("Good luck next time");
+  } else if (friendScore >= 40 && friendScore < 60) {
+    console.log("Keep your friend's message unseen");
+  } else if (friendScore < 40) {
+    console.log("Block your friend");
+  }
+} else if (yourScore < 80) {
+  console.log("Go to home and sleep and act sad");
+}
